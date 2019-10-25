@@ -1,0 +1,12 @@
+<p *ngIf="!showAlert else showAlertMsg">
+  you'll see notification here <br>
+  User FIPS info is: {{clientInfo.FIPS_CODE}}
+</p>
+<ng-template #showAlertMsg>
+  <div #alert class="alert alert-warning alert-dismissible fade show" role="alert">
+    <button type="button" class="close" aria-label="Close" (click)="closeAlert()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>message send is: {{message}}<br> audio url is: {{audioUrl}}</strong>
+  </div>
+</ng-template>
